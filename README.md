@@ -7,7 +7,7 @@ This project is a starter Angular2 project of an administrative panel with Admin
 ### How to use?
 
 * Clone the repository
-* Rename folder, package.json
+* Rename folder and package.json
 * Delete .git repository
 * Start new git
 * Configurate your project
