@@ -34,6 +34,8 @@ import { AlertComponent } from './dialog-modals/alert/alert.component';
 import { PromptComponent } from './dialog-modals/prompt/prompt.component';
 import { MainComponent } from './main/main.component';
 
+import { configuration } from './configuration';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +57,7 @@ import { MainComponent } from './main/main.component';
     ChartsModule,
     RouterModule.forRoot([]),
     AppRoutingModule,
-    AuthServiceModule.forRoot('APP-PROJECT-NAME'),
+    AuthServiceModule.forRoot(configuration.localStorageKey),
     ServerServiceModule.forRoot(),
     ReactiveFormsModule,
     Ng2MaskModule,

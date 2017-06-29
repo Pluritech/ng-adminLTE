@@ -1,9 +1,10 @@
-import { ToasterService } from 'angular2-toaster';
-import { CustomError } from './../models/CustomError';
 import { Router } from '@angular/router';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+import { CustomError } from './../models/CustomError';
+import { ToasterService } from 'angular2-toaster';
+import { configuration } from './../configuration';
 import { AuthService } from '@pluritech/auth-service';
 import { Credential } from './../models/Credential';
 import { LoginService } from './../providers/login.service';
@@ -15,6 +16,7 @@ import { LoginService } from './../providers/login.service';
 export class LoginComponent implements OnInit, OnDestroy {
 
   private classes = ['hold-transition', 'login-page'];
+  public projectName = configuration.projectName;
   public isFormSubmitted: boolean;
   public loginForm: FormGroup;
   public errorMsg: string;

@@ -5,9 +5,9 @@
     <!-- Logo -->
     <a [routerLink]="['/']" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>Project</b></span>
+      <span class="logo-mini"><b>{{projectName.firstName}}</b></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Project</b> Project</span>
+      <span class="logo-lg"><b>{{projectName.firstName}}</b> {{projectName.lastName}}</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -40,7 +40,7 @@
               <!-- User image -->
               <li class="user-header">
                 <p>
-                  Usuário - Project Name
+                  Usuário - {{projectName.firstName}} {{projectName.lastName}}
                 </p>
               </li>
               <!-- Menu Footer-->
@@ -65,31 +65,31 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Menu de navegação</li>
         <li>
-          <a [routerLink]="['/']">
+          <a [routerLink]="['/main']">
             <i class="fa fa-area-chart text-success"></i>
             <span>Item 1</span>
           </a>
         </li>
         <li>
-          <a [routerLink]="['/']">
+          <a [routerLink]="['/main']">
             <i class="fa fa-at text-danger"></i>
             <span>Item 2</span>
           </a>
         </li>
         <li>
-          <a [routerLink]="['/']">
+          <a [routerLink]="['/main']">
             <i class="fa fa-graduation-cap text-info"></i>
             <span>Item 3</span>
           </a>
         </li>
         <li>
-          <a [routerLink]="['/']">
+          <a [routerLink]="['/main']">
             <i class="fa fa-plane text-warning"></i>
             <span>Item 4</span>
           </a>
         </li>
         <li>
-          <a [routerLink]="['/']">
+          <a [routerLink]="['/main']">
             <i class="fa fa-fighter-jet text-muted"></i>
             <span>Item 5</span>
           </a>
@@ -108,7 +108,7 @@
 
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
-      <b>Project</b> Project Name
+      <b>{{projectName.firstName}}</b> {{projectName.lastName}}
     </div>
     <strong>
       <a href="https://www.pluritech.com.br">

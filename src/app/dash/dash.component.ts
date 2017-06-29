@@ -1,7 +1,8 @@
 import { Router } from '@angular/router';
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { AuthService } from '@pluritech/auth-service';
 
+import { configuration } from './../configuration';
+import { AuthService } from '@pluritech/auth-service';
 @Component({
   selector: 'app-dash',
   templateUrl: './dash.component.html',
@@ -9,7 +10,8 @@ import { AuthService } from '@pluritech/auth-service';
 })
 export class DashComponent implements OnInit, OnDestroy {
 
-  private classes = ['hold-transition', 'skin-green', 'sidebar-mini'];
+  public projectName = configuration.projectName;
+  private classes = ['hold-transition', configuration.skin, 'sidebar-mini'];
 
   constructor(
     private router: Router,
