@@ -1,0 +1,22 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" (click)="cancel()" >&times;</button>
+        <h4 class="modal-title">{{title || 'Entre com os dados'}}</h4>
+      </div>
+      <form [formGroup]="formPrompt" (ngSubmit)="submitFields()">
+        <div class="modal-body">
+          <div class="row" *ngFor="let fd of fields">
+            <div class="form-group col-md-12" [ngClass]="{'has-error': hasError(fd.idField)}" >
+              <label >{{fd.label}}</label>
+              <input class="form-control" [type]="fd.type" [placeholder]="fd.placeholder" [formControlName]="fd.idField">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-success"> {{ btnYes || 'Confirmar' }} </button>
+          <button type="button" class="btn btn-primary" (click)="cancel()"> {{ btnNo || 'Cancelar' }} </button>
+        </div>
+      </form>
+    </div>
+</div>

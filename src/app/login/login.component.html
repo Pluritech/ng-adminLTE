@@ -1,0 +1,51 @@
+<div class="login-box">
+  <div class="login-logo">
+    <a [routerLink]="['/']"><b>Project</b> ProjectName</a>
+  </div>
+  <!-- /.login-logo -->
+  <div class="login-box-body">
+    <p class="login-box-msg">
+      Entre com suas credenciais para iniciar a sessão
+    </p>
+
+    <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value, loginForm.valid)" novalidate>
+      <div class="form-group has-feedback" [ngClass]="{'has-error': loginForm.get('email').errors && isFormSubmitted}">
+        <input type="email" class="form-control" placeholder="Email" formControlName="email">
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+
+        <span *ngIf="loginForm.hasError('required', ['email']) && isFormSubmitted" class="text-danger">
+          O email é obrigatório.
+        </span>
+        <span *ngIf="loginForm.hasError('email', ['email']) && isFormSubmitted" class="text-danger">
+          Por favor, insira um e-mail válido.
+        </span>
+      </div>
+
+      <div class="form-group has-feedback" [ngClass]="{'has-error' : loginForm.get('password').errors && isFormSubmitted}">
+        <input type="password" class="form-control" placeholder="Sua senha" formControlName="password">
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+
+        <small *ngIf="loginForm.hasError('required', ['password']) && isFormSubmitted" class="text-danger">
+          A senha é obrigatória.
+        </small>
+
+        <small *ngIf="loginForm.hasError('minlength', ['password']) && isFormSubmitted" class="text-danger">
+          A senha deve ter no mínimo 3 dígitos.
+        </small>
+      </div>
+
+      <p *ngIf="errorMsg" class="text-danger">{{errorMsg}}</p>
+
+      <div class="row">
+        <div class="col-xs-8">
+        </div>
+        <div class="col-xs-4">
+          <button type="submit" class="btn btn-primary btn-block btn-flat">Entrar</button>
+        </div>
+      </div>
+    </form>
+
+    <a [routerLink]="['/forgot']">Esqueci minha senha</a><br>
+
+  </div>
+</div>
