@@ -24,6 +24,8 @@
     "@angular/platform-server": "^4.2.4",
     "@angular/router": "^4.2.4",
     "@pluritech/auth-service": "^2.0.0",
+    "@pluritech/dialog-service": "^1.0.1",
+    "@pluritech/ng2-responsive-table": "^0.1.32",
     "@pluritech/pagination": "^1.0.2",
     "@pluritech/server-service": "^1.0.5",
     "admin-lte": "^2.3.11",
