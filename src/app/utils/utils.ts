@@ -1,6 +1,3 @@
-import { AlertComponent } from './../dialog-modals/alert/alert.component';
-import { DialogService } from 'ng2-bootstrap-modal';
-
 export class Utils {
 
  /** This method is used to repĺace all '_' to '-' in names key of params url */
