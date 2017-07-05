@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { LoginService } from './../providers/login.service';
+import { configuration } from './../configuration';
 @Component({
   selector: 'app-forgot-password',
   templateUrl: './forgot-password.component.html',
@@ -12,7 +13,7 @@ export class ForgotPasswordComponent implements OnInit, OnDestroy {
   public emailToRecovery: string;
   public isSubmitting = false;
   public msgFeedback: string;
-
+  public projectName = configuration.projectName;
   constructor(private loginService: LoginService) { }
 
   ngOnInit() {
