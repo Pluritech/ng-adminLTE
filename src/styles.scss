@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'node_modules/angular2-toaster/toaster';
+@import '/loading-page';
 
 .section {
     margin-bottom: 10px;
@@ -15,4 +16,21 @@
     &:focus:before, &:valid:before {
         content: "";
     }
+}
+
+.divider {
+  height: 1px;
+  width:100%;
+  display:block; /* for use on default inline elements like span */
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: darken(#e5e5e5, 20%);
+}
+
+.sidebar-menu li>a>.pull-right-container>.fa-angle-left {
+  transition: transform .5s ease;
+}
+
+.login-logo img{
+  width: 100%;
 }

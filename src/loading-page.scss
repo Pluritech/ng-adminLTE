@@ -1,0 +1,47 @@
+$loading-text-color: lighten(#333, 30%);
+$loading-background-color:  #d2d6de;
+$image-width: 340px;
+
+@keyframes ellipsis {
+  to {
+    width: 1.25em;
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 1.25em;
+  }
+}
+
+.ng-loading {
+  padding-bottom: 10vh;
+  background: $loading-background-color;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .loading-text {
+    text-align: left;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: $loading-text-color;
+    width: calc(#{$image-width} / 2);
+    margin-left: calc((#{$image-width} / 2) / 2);
+    &:after {
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: bottom;
+      -webkit-animation: ellipsis steps(4,end) 700ms infinite;
+      animation: ellipsis steps(4,end) 700ms infinite;
+      content: "\2026";
+      width: 0px;
+    }
+  }
+  > .logo {
+    width: $image-width;
+  }
+}
