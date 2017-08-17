@@ -33,13 +33,17 @@ import { AuthenticatedGuard } from './authenticated.guard';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { LoaderComponent } from './loader/loader.component';
 
+
 import { DatePipe } from '@angular/common';
+
 
 import { ConfirmComponent } from './dialog-modals/confirm/confirm.component';
 import { AlertComponent } from './dialog-modals/alert/alert.component';
 import { PromptComponent } from './dialog-modals/prompt/prompt.component';
 
+
 import { configuration } from './configuration';
+
 
 @NgModule({
   declarations: [
