@@ -11,28 +11,33 @@ import { Ng2MaskModule } from 'ng2-mask';
 import { BootstrapModalModule } from 'ng2-bootstrap-modal';
 import { FileUploadModule } from 'ng2-file-upload/file-upload/file-upload.module';
 import { ToasterModule } from 'angular2-toaster';
+import { PaginationModule } from '@pluritech/pagination';
+import { QuillModule } from 'ngx-quill';
+import { Ng2TableModule } from '@pluritech/ng2-responsive-table';
+
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { TableComponent } from './table/table.component';
 import { DashComponent } from './dash/dash.component';
+import { MainComponent } from './main/main.component';
+
 
 import { AppRoutingModule } from './app-routing.module';
 
+
 import { LoginService } from './providers/login.service';
+
 
 import { UnauthenticatedGuard } from './unauthenticated.guard';
 import { AuthenticatedGuard } from './authenticated.guard';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { LoaderComponent } from './loader/loader.component';
-import { PaginationModule } from '@pluritech/pagination';
 
 import { DatePipe } from '@angular/common';
 
 import { ConfirmComponent } from './dialog-modals/confirm/confirm.component';
 import { AlertComponent } from './dialog-modals/alert/alert.component';
 import { PromptComponent } from './dialog-modals/prompt/prompt.component';
-import { MainComponent } from './main/main.component';
 
 import { configuration } from './configuration';
 
@@ -40,7 +45,6 @@ import { configuration } from './configuration';
   declarations: [
     AppComponent,
     LoginComponent,
-    TableComponent,
     DashComponent,
     ForgotPasswordComponent,
     LoaderComponent,
@@ -64,7 +68,9 @@ import { configuration } from './configuration';
     PaginationModule,
     BootstrapModalModule,
     FileUploadModule,
-    ToasterModule
+    ToasterModule,
+    QuillModule,
+    Ng2TableModule
   ],
   entryComponents: [
     ConfirmComponent,
