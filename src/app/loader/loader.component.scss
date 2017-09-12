@@ -5,8 +5,8 @@
         height: 8em;
     }
     .loader {
-        $color-loading: lighten(#444, 40%);
-        $color-circle-loading: lighten(#444, 25%);
+        $color-loading: lighten(#3c8dbc, 30%);
+        $color-circle-loading: lighten(#3c8dbc, 20%);
         margin: 15px auto;
         font-size: 10px;
         position: relative;
@@ -20,7 +20,7 @@
         -webkit-animation: load8 1.1s infinite linear;
         animation: load8 1.1s infinite linear;
     }
-    
+
     @-webkit-keyframes load8 {
         0% {
             -webkit-transform: rotate(0deg);

@@ -25,6 +25,8 @@ import { LoginComponent } from './login/login.component';
 import { DashComponent } from './dash/dash.component';
 import { MainComponent } from './main/main.component';
 import { LoaderComponent } from './loader/loader.component';
+import { ContentLoaderComponent } from './content-loader/content-loader.component';
+
 
 // Router config
 import { AppRoutingModule } from './app-routing.module';
@@ -51,7 +53,8 @@ import { configuration } from './configuration';
     DashComponent,
     ForgotPasswordComponent,
     LoaderComponent,
-    MainComponent
+    MainComponent,
+    ContentLoaderComponent
   ],
   imports: [
     BrowserModule,
