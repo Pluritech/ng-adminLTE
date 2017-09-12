@@ -37,11 +37,6 @@ import { LoaderComponent } from './loader/loader.component';
 import { DatePipe } from '@angular/common';
 
 
-import { ConfirmComponent } from './dialog-modals/confirm/confirm.component';
-import { AlertComponent } from './dialog-modals/alert/alert.component';
-import { PromptComponent } from './dialog-modals/prompt/prompt.component';
-
-
 import { configuration } from './configuration';
 
 
@@ -52,9 +47,6 @@ import { configuration } from './configuration';
     DashComponent,
     ForgotPasswordComponent,
     LoaderComponent,
-    ConfirmComponent,
-    AlertComponent,
-    PromptComponent,
     MainComponent
   ],
   imports: [
@@ -76,11 +68,7 @@ import { configuration } from './configuration';
     QuillModule,
     Ng2TableModule
   ],
-  entryComponents: [
-    ConfirmComponent,
-    AlertComponent,
-    PromptComponent
-  ],
+  entryComponents: [],
   providers: [
     LoginService,
     AuthenticatedGuard,
