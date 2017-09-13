@@ -2,12 +2,12 @@ import { Router } from '@angular/router';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { CustomError } from './../models/custom-error';
+import { CustomError } from './../../models/custom-error';
 import { ToasterService } from 'angular2-toaster';
-import { configuration } from './../configuration';
+import { configuration } from './../../configuration';
 import { AuthService } from '@pluritech/auth-service';
-import { Credential } from './../models/credential';
-import { LoginService } from './../providers/login.service';
+import { Credential } from './../../models/credential';
+import { LoginService } from './../../providers/login/login.service';
 
 @Component({
   selector: 'app-login',

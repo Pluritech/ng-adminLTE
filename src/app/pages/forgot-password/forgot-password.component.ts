@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
-import { LoginService } from './../providers/login.service';
-import { configuration } from './../configuration';
+import { LoginService } from './../../providers/login/login.service';
+import { configuration } from './../../configuration';
 @Component({
   selector: 'app-forgot-password',
   templateUrl: './forgot-password.component.html',

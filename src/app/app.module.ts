@@ -21,23 +21,26 @@ import { DialogServiceModule } from '@pluritech/dialog-service';
 
 // Component
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { DashComponent } from './dash/dash.component';
-import { MainComponent } from './main/main.component';
-import { LoaderComponent } from './loader/loader.component';
-import { ContentLoaderComponent } from './content-loader/content-loader.component';
+import { LoaderComponent } from './components/loader/loader.component';
+import { ContentLoaderComponent } from './components/content-loader/content-loader.component';
 
+// Parts
+import { DashComponent } from './parts/dash/dash.component';
+
+//  Pages
+import { MainComponent } from './pages/main/main.component';
+import { LoginComponent } from './pages/login/login.component';
 
 // Router config
 import { AppRoutingModule } from './app-routing.module';
 
 // Services
-import { LoginService } from './providers/login.service';
+import { LoginService } from './providers/login/login.service';
 
 // Guards
 import { UnauthenticatedGuard } from './guards/unauthenticated/unauthenticated.guard';
 import { AuthenticatedGuard } from './guards/authenticated/authenticated.guard';
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 
 // Pipes
 import { DatePipe } from '@angular/common';

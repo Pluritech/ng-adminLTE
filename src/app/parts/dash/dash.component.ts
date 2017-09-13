@@ -1,7 +1,7 @@
 import { Router } from '@angular/router';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
-import { configuration } from './../configuration';
+import { configuration } from './../../configuration';
 import { AuthService } from '@pluritech/auth-service';
 @Component({
   selector: 'app-dash',
