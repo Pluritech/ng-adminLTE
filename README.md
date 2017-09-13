@@ -2,14 +2,14 @@
 
 ### Angular2 Administrative Panel with AdminLTE Template
 
-This project is a starter Angular2 project of an administrative panel with AdminLTE template.
+This project is a starter Angular project of an admin panel with AdminLTE template.
 
 ### How to use?
 
 * Clone the repository
-* Rename folder and package.json
+* Rename the folder and update the package.json
 * Delete .git repository
-* Start new git
+* Start a new git
 * Configurate your project
 
 ### Configuration the project
@@ -26,6 +26,6 @@ export const configuration = {
   skin: 'skin-blue'
 };
 ```
-The avaiable skins are from AdminLTE template. So, you can access the documentation [here](https://adminlte.io/themes/AdminLTE/documentation/index.html)
+The available skins are from AdminLTE template. So, you can access the documentation [here](https://adminlte.io/themes/AdminLTE/documentation/index.html)
 
 
