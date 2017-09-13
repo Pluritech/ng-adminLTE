@@ -35,8 +35,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginService } from './providers/login.service';
 
 // Guards
-import { UnauthenticatedGuard } from './unauthenticated.guard';
-import { AuthenticatedGuard } from './authenticated.guard';
+import { UnauthenticatedGuard } from './guards/unauthenticated/unauthenticated.guard';
+import { AuthenticatedGuard } from './guards/authenticated/authenticated.guard';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 // Pipes

@@ -1,7 +1,7 @@
 import { MainComponent } from './main/main.component';
-import { UnauthenticatedGuard } from './unauthenticated.guard';
+import { UnauthenticatedGuard } from './guards/unauthenticated/unauthenticated.guard';
+import { AuthenticatedGuard } from './guards/authenticated/authenticated.guard';
 import { LoginComponent } from './login/login.component';
-import { AuthenticatedGuard } from './authenticated.guard';
 import { DashComponent } from './dash/dash.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { NgModule } from '@angular/core';
