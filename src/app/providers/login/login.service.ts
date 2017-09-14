@@ -2,7 +2,7 @@ import { CustomError } from './../../models/custom-error';
 import { Credential } from './../../models/credential';
 import { Injectable } from '@angular/core';
 import { ServerService } from '@pluritech/server-service';
-import { LoginEndpoints } from './../../endpoints/login.endpoints';
+import { LoginEndpoints } from './login.endpoints';
 
 
 @Injectable()
