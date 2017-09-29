@@ -32,7 +32,7 @@
         "../node_modules/icheck/icheck.js",
         "../node_modules/chart.js/dist/Chart.js",
         "../node_modules/fastclick/lib/fastclick.js",
-        "../node_modules/admin-lte/dist/js/app.js"
+        "../node_modules/admin-lte/dist/js/adminlte.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
