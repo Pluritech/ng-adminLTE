@@ -30,7 +30,8 @@ export class DashComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     $(document).ready(() => {
-      $.AdminLTE.layout.fix();
+      const layout = $('body').data('lte.layout');
+      layout.fix();
     });
     const body = document.getElementsByTagName('body')[0];
     for (const cl of this.classes) {
