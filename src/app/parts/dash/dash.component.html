@@ -60,32 +60,43 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Menu de navegação</li>
-        <li>
-          <a [routerLink]="['/main']">
+        <li class="treeview link-pointer" routerLinkActive="active">
+          <a>
+            <i class="fa fa-linux"></i> <span>Item</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="" routerLinkActive="active"><a [routerLink]="['/main']"><i class="fa fa-linux"></i> Sub Item</a></li>
+          </ul>
+        </li>
+        <li routerLinkActive="active">
+          <a [routerLink]="['/main1']">
             <i class="fa fa-linux text-success"></i>
             <span>Item 1</span>
           </a>
         </li>
-        <li>
-          <a [routerLink]="['/main']">
+        <li routerLinkActive="active">
+          <a [routerLink]="['/main2']">
             <i class="fa fa-linux text-danger"></i>
             <span>Item 2</span>
           </a>
         </li>
-        <li>
-          <a [routerLink]="['/main']">
+        <li routerLinkActive="active">
+          <a [routerLink]="['/main3']">
             <i class="fa fa-linux text-info"></i>
             <span>Item 3</span>
           </a>
         </li>
-        <li>
-          <a [routerLink]="['/main']">
+        <li routerLinkActive="active">
+          <a [routerLink]="['/main4']">
             <i class="fa fa-linux text-warning"></i>
             <span>Item 4</span>
           </a>
         </li>
-        <li>
-          <a [routerLink]="['/main']">
+        <li routerLinkActive="active">
+          <a [routerLink]="['/main5']">
             <i class="fa fa-linux text-muted"></i>
             <span>Item 5</span>
           </a>

@@ -31,6 +31,11 @@ const routes: Routes = [
     canActivate: [AuthenticatedGuard],
     children: [
       { component: MainComponent, path: 'main' },
+      { component: MainComponent, path: 'main1' },
+      { component: MainComponent, path: 'main2' },
+      { component: MainComponent, path: 'main3' },
+      { component: MainComponent, path: 'main4' },
+      { component: MainComponent, path: 'main5' },
     ]
   }
 ];
