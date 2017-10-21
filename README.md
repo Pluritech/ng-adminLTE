@@ -19,7 +19,8 @@ Open app/configuration.ts and fill the following fields.
 export const configuration = {
   projectName : {
     firstName: 'Project',
-    lastName: 'Name'
+    lastName: 'Name',
+    minimalName: 'PN'
   },
   localStorageKey: 'PROJECT-NAME-APP',
   logoPath: 'assets/panel.png',
