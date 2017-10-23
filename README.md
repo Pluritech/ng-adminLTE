@@ -4,6 +4,11 @@
 
 This project is a starter Angular project of an admin panel with AdminLTE template.
 
+
+<p align="center">
+  <img src="project-image.png" alt="Project Image">
+</p>
+
 ### How to use?
 
 * Clone the repository
@@ -24,7 +29,8 @@ export const configuration = {
   },
   localStorageKey: 'PROJECT-NAME-APP',
   logoPath: 'assets/panel.png',
-  skin: 'skin-blue'
+  skin: 'skin-blue',
+  userDefaultImage: 'assets/default-user.png'
 };
 ```
 The available skins are from AdminLTE template. So, you can access the documentation [here](https://adminlte.io/themes/AdminLTE/documentation/index.html)
