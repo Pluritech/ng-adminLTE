@@ -1,4 +1,4 @@
-## Panel-Sample
+## Angular AdminLTE
 
 ### Angular2 Administrative Panel with AdminLTE Template
 
