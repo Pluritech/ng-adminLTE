@@ -4,6 +4,11 @@
 
 This project is a starter Angular project of an admin panel with AdminLTE template.
 
+
+<p align="center">
+  <img src="project-image.png" alt="Project Image">
+</p>
+
 ### How to use?
 
 * Clone the repository
