@@ -10,8 +10,9 @@ import { AuthService } from '@pluritech/auth-service';
 })
 export class DashComponent implements OnInit, OnDestroy {
 
-  public projectName = configuration.projectName;
-  private classes = ['hold-transition', configuration.skin, 'sidebar-mini'];
+  public projectName: any = configuration.projectName;
+  public userDefault: string = configuration.userDefaultImage;
+  private classes: string[] = ['hold-transition', configuration.skin, 'sidebar-mini'];
 
   constructor(
     private router: Router,
