@@ -34,8 +34,8 @@ export class DashComponent implements OnInit, OnDestroy {
       const layout = $('body').data('lte.layout');
       layout.fix();
       layout.fixSidebar();
-      const element: any = $('[data-widget="tree"]');
-      element.tree();
+      const trees: any = $('[data-widget="tree"]');
+      trees.tree();
     });
     const body = document.getElementsByTagName('body')[0];
     for (const cl of this.classes) {
