@@ -28,7 +28,7 @@
     "@pluritech/ng2-responsive-table": "^0.1.32",
     "@pluritech/pagination": "^1.0.2",
     "@pluritech/server-service": "^2.0.0",
-    "admin-lte": "^2.3.11",
+    "admin-lte": "^2.4.2",
     "angular2-toaster": "^4.0.0",
     "bootstrap": "^3.3.7",
     "chart.js": "^2.6.0",

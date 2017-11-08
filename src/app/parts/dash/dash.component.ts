@@ -12,7 +12,7 @@ export class DashComponent implements OnInit, OnDestroy {
 
   public projectName: any = configuration.projectName;
   public userDefault: string = configuration.userDefaultImage;
-  private classes: string[] = ['hold-transition', configuration.skin, 'sidebar-mini'];
+  private classes: string[] = [configuration.skin, 'sidebar-mini'];
 
   constructor(
     private router: Router,
@@ -33,6 +33,9 @@ export class DashComponent implements OnInit, OnDestroy {
     $(document).ready(() => {
       const layout = $('body').data('lte.layout');
       layout.fix();
+      layout.fixSidebar();
+      const element: any = $('[data-widget="tree"]');
+      element.tree();
     });
     const body = document.getElementsByTagName('body')[0];
     for (const cl of this.classes) {
