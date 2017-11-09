@@ -17,7 +17,7 @@ This project is a starter Angular project of an admin panel with AdminLTE templa
 * Start a new git
 * Configurate your project
 
-### Configuration the project
+### Configure the project
 
 Open app/configuration.ts and fill the following fields.
 ```typescript
