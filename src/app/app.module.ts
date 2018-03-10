@@ -10,7 +10,7 @@ import { HttpModule } from '@angular/http';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { AuthServiceModule } from '@pluritech/auth-service';
 import { ServerServiceModule } from '@pluritech/server-service';
-import { Ng2MaskModule } from 'ng2-mask';
+import { NgxMaskModule } from 'ngx-mask';
 import { BootstrapModalModule } from 'ng2-bootstrap-modal';
 import { FileUploadModule } from 'ng2-file-upload/file-upload/file-upload.module';
 import { ToasterModule } from 'angular2-toaster';
@@ -70,7 +70,7 @@ import { configuration } from './configuration';
     AuthServiceModule.forRoot(configuration.localStorageKey),
     ServerServiceModule.forRoot(),
     ReactiveFormsModule,
-    Ng2MaskModule,
+    NgxMaskModule,
     PaginationModule,
     BootstrapModalModule,
     FileUploadModule,
