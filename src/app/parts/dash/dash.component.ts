@@ -32,9 +32,13 @@ export class DashComponent implements OnInit, OnDestroy {
   ngOnInit() {
     $(document).ready(() => {
       const layout = $('body').data('lte.layout');
-      layout.fix();
+      if (layout) {
+        layout.fix();
+      }
       const trees: any = $('[data-widget="tree"]');
-      trees.tree();
+      if (trees) {
+        trees.tree();
+      }
     });
     const body = document.getElementsByTagName('body')[0];
     for (const cl of this.classes) {
