@@ -18,6 +18,10 @@ export class AppComponent implements OnInit {
       $('html,body').animate({ scrollTop: 0 }, 'slow', () => {
         $('body').removeClass('sidebar-open');
       });
+      const collapse = $('.navbar-collapse');
+      if (collapse && collapse[0] && collapse[0].classList.contains('in')) {
+        collapse[0].classList.remove('in');
+      }
     });
   }
 
