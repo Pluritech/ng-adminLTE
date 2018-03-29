@@ -1,3 +1,4 @@
+import { Utils } from './../../utils/utils';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { LoginService } from './../../providers/login/login.service';
