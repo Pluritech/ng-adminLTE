@@ -30,7 +30,8 @@ export const configuration = {
   localStorageKey: 'PROJECT-NAME-APP',
   logoPath: 'assets/panel.png',
   skin: 'skin-blue',
-  userDefaultImage: 'assets/default-user.png'
+  userDefaultImage: 'assets/default-user.png',
+  serverErrorEndpoint: '',
 };
 ```
 The available skins are from AdminLTE template. So, you can access the documentation [here](https://adminlte.io/themes/AdminLTE/documentation/index.html)
