@@ -7,7 +7,8 @@ export const configuration = {
   localStorageKey: 'PROJECT-NAME-APP',
   logoPath: '',
   skin: 'skin-blue',
-  userDefaultImage: 'assets/default-user.png'
+  userDefaultImage: 'assets/default-user.png',
+  serverErrorEndpoint: '',
 };
 
 // -- Avaiable Skins
