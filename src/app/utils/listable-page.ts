@@ -17,6 +17,6 @@ export abstract class ListablePage<FilterGenericType, ListGenericType> {
     this.getList();
   }
 
-  protected mountTable(): void {}
+  protected abstract mountTable(): void;
 
 }
