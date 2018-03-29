@@ -42,9 +42,6 @@ import { UnauthenticatedGuard } from './guards/unauthenticated/unauthenticated.g
 import { AuthenticatedGuard } from './guards/authenticated/authenticated.guard';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 
-// Pipes
-import { DatePipe } from '@angular/common';
-
 // Configurations Files
 import { configuration } from './configuration';
 
@@ -84,7 +81,6 @@ import { configuration } from './configuration';
     LoginService,
     AuthenticatedGuard,
     UnauthenticatedGuard,
-    DatePipe
   ],
   bootstrap: [AppComponent]
 })
