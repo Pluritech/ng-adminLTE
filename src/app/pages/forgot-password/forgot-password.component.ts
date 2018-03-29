@@ -30,34 +30,32 @@ export class ForgotPasswordComponent implements OnInit, OnDestroy {
     }
   }
 
-  // recoveryPassword(): void {
-  //   this.isSubmitting = true;
-  //   this.msgFeedback = '';
-  //   this.loginService.recoveryPassword(this.emailToRecovery)
-  //     .then(() => {
-  //       this.msgFeedback = 'Email de recuperação enviado com sucesso.';
-  //       this.isSubmitting = false;
-  //     })
-  //     .catch(err => {
-  //       switch (err.status) {
-  //         case 'InvalidEmail':
-  //           this.msgFeedback = 'Email inválido ou não encontrado entre os alunos cadastrados.';
-  //           break;
-  //         default:
-  //           this.msgFeedback = 'Um erro inesperado aconteceu';
-  //           break;
-  //       }
-  //       this.isSubmitting = false;
-  //     });
-  // }
-
-  recoveryPassword(): void {
+  public async recoveryPassword(): Promise<void> {
     this.isSubmitting = true;
     this.msgFeedback = '';
-    setTimeout(() => {
+    try {
+      await this.loginService.recoveryPassword(this.emailToRecovery)
       this.msgFeedback = 'Email de recuperação enviado com sucesso.';
-      this.isSubmitting = false;
-    }, 1000);
+    } catch (e) {
+      switch (e.status) {
+        case 'InvalidEmail':
+          this.msgFeedback = 'Email inválido ou não encontrado entre os alunos cadastrados.';
+          break;
+        default:
+          this.msgFeedback = 'Um erro inesperado aconteceu';
+          break;
+      }
+    }
+    this.isSubmitting = false;
   }
+
+  // public recoveryPassword(): void {
+  //   this.isSubmitting = true;
+  //   this.msgFeedback = '';
+  //   setTimeout(() => {
+  //     this.msgFeedback = 'Email de recuperação enviado com sucesso.';
+  //     this.isSubmitting = false;
+  //   }, 1000);
+  // }
 
 }
