@@ -47,7 +47,7 @@ export class UtilsService {
 
   /**
    * This method is used to send the application error (that is not an HTTP error) to the server, for easily debug.
-   * The configuration.serverErrorEndpoints needs to be seted.
+   * You have to set the serverErrorEndpoint in configuration file.
    * @param {message: string, stack: string} errorObject - The local application error.
    */
   private async sendLocalErrorToServer(errorObject: {message: string, stack: string}): Promise<void> {
