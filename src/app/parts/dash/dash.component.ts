@@ -19,14 +19,13 @@ export class DashComponent implements OnInit, OnDestroy {
     private authService: AuthService
   ) { }
 
-  public logout(): void {
-    this.authService.logout()
-      .then(() => {
-          this.router.navigate(['/login']);
-      })
-      .catch((err) => {
-        console.log('err logout', err);
-      });
+  public async logout(): Promise<void> {
+    try {
+      await this.authService.logout();
+      this.router.navigate(['/login']);
+    } catch (e) {
+      console.log('err logout', e);
+    }
   }
 
   ngOnInit() {
