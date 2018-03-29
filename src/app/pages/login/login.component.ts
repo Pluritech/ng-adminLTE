@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   //     this.router.navigate(['/report']);
   //   } catch (e) {
   //     switch (e.status) {
-  //       case 'IsNotAPilot':
+  //       case 'InvalidKindOfUser':
   //         this.errorMsg = e.message;
   //         break;
   //       case 'UserNotExists':

@@ -2,9 +2,9 @@ export class Utils {
 
  /** This method is used to repĺace all '_' to '-' in names key of params url */
   public static standardizePropFilter(params: any): any {
-    let paramsResult = {};
-    for(let key in params) {
-      if(params[key]) {
+    const paramsResult = {};
+    for (const key in params) {
+      if (params[key]) {
         paramsResult[key.replace(new RegExp(/_/, 'g'), '-')] = params[key];
       }
     }
