@@ -16,7 +16,7 @@ export class LoginService {
           if (res['kindOfUser'] === 'admin') {
             return res;
           } else {
-            throw new CustomError('InvalidKindOfUser', 'Apenas administradores podem ser acessar o WebApp.');
+            throw new CustomError('InvalidKindOfUser', null);
           }
         });
   }

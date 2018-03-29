@@ -2,6 +2,7 @@ import { Router } from '@angular/router';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+import { UtilsService } from './../../providers/utils/utils.service';
 import { CustomError } from './../../models/custom-error';
 import { ToasterService } from 'angular2-toaster';
 import { configuration } from './../../configuration';
@@ -22,12 +23,14 @@ export class LoginComponent implements OnInit, OnDestroy {
   public loginForm: FormGroup;
   public errorMsg: string;
 
-  constructor(private formBuilder: FormBuilder,
+  constructor(
+    private formBuilder: FormBuilder,
     private router: Router,
     private loginService: LoginService,
     private authService: AuthService,
-    private toasterService: ToasterService) {
-  }
+    private toasterService: ToasterService,
+    private utilsService: UtilsService,
+  ) {}
 
   private initForm(): void {
     this.loginForm = this.formBuilder.group({
@@ -47,17 +50,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   //     await this.authService.login(token);
   //     this.router.navigate(['/report']);
   //   } catch (e) {
-  //     switch (e.status) {
-  //       case 'InvalidKindOfUser':
-  //         this.errorMsg = e.message;
-  //         break;
-  //       case 'UserNotExists':
-  //         this.errorMsg = 'Email ou senha incorretos.';
-  //         break;
-  //       default:
-  //         this.errorMsg = 'Algum erro inesperado aconteceu. Tente novamente, se persistir, entre em contato.';
-  //         break;
-  //     }
+  //     this.utilsService.handleError(e);
   //   }
   // }
 

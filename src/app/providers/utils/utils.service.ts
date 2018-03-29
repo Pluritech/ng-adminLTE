@@ -1,9 +1,10 @@
+import { ServerService } from '@pluritech/server-service';
+import { Injectable } from '@angular/core';
+
+import { ToasterService } from 'angular2-toaster';
 import { environment } from './../../../environments/environment.prod';
 import { configuration } from './../../configuration';
 import { ErrorMessages } from './error-messages';
-import { ServerService } from '@pluritech/server-service';
-import { ToasterService } from 'angular2-toaster';
-import { Injectable } from '@angular/core';
 
 @Injectable()
 export class UtilsService {
