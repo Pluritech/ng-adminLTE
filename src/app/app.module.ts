@@ -1,5 +1,5 @@
 // Angular Modules
-import { NgModule } from '@angular/core';
+import { NgModule, ApplicationRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
@@ -70,7 +70,7 @@ import { configuration } from './configuration';
     AuthServiceModule.forRoot(configuration.localStorageKey),
     ServerServiceModule.forRoot(),
     ReactiveFormsModule,
-    NgxMaskModule,
+    NgxMaskModule.forRoot(),
     PaginationModule,
     BootstrapModalModule,
     FileUploadModule,
@@ -88,4 +88,8 @@ import { configuration } from './configuration';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(applicationRef: ApplicationRef) {
+    Object.defineProperty(applicationRef, '_rootComponents', {get: () => applicationRef['components']});
+  }
+}
