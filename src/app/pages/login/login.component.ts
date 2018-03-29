@@ -36,37 +36,36 @@ export class LoginComponent implements OnInit, OnDestroy {
     });
   }
 
-  // public login(formValue: any, isValid: boolean): void {
+  // public async login(formValue: any, isValid: boolean): Promise<void> {
   //   this.errorMsg = '';
   //   this.isFormSubmitted = true;
   //   const credentials = new Credential(formValue['email'], formValue['password']);
-  //   if (isValid) {
-  //     this.loginService.login(credentials)
-  //       .then(data => {
-  //         this.authService.login(data);
-  //         this.router.navigate(['/report']);
-  //       })
-  //       .catch(err => {
-  //         switch (err.status) {
-  //           case 'IsNotAPilot':
-  //             this.errorMsg = err.message;
-  //             break;
-  //           case 'UserNotExists':
-  //             this.errorMsg = 'Email ou senha incorretos.';
-  //             break;
-  //           default:
-  //             this.errorMsg = 'Algum erro inesperado aconteceu. Tente novamente, se persistir, entre em contato.';
-  //             break;
-  //         }
-  //       });
+  //   if (!isValid) { return; }
+
+  //   try {
+  //     const token = await this.loginService.login(credentials);
+  //     await this.authService.login(token);
+  //     this.router.navigate(['/report']);
+  //   } catch (e) {
+  //     switch (e.status) {
+  //       case 'IsNotAPilot':
+  //         this.errorMsg = e.message;
+  //         break;
+  //       case 'UserNotExists':
+  //         this.errorMsg = 'Email ou senha incorretos.';
+  //         break;
+  //       default:
+  //         this.errorMsg = 'Algum erro inesperado aconteceu. Tente novamente, se persistir, entre em contato.';
+  //         break;
+  //     }
   //   }
   // }
 
   public login(formValue: any, isValid: boolean): void {
     this.errorMsg = '';
     this.isFormSubmitted = true;
-    setTimeout(() => {
-      this.authService.login({accessToken: 'logged', expires: 1312312});
+    setTimeout(async () => {
+      await this.authService.login({accessToken: 'logged', expires: 1312312});
       this.router.navigate(['/main']);
     }, 1000);
   }
