@@ -72,7 +72,7 @@ import { configuration } from './configuration';
     PaginationModule,
     BootstrapModalModule,
     FileUploadModule,
-    ToasterModule,
+    ToasterModule.forRoot(),
     QuillModule,
     Ng2TableModule,
     DialogServiceModule.forRoot()
