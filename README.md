@@ -37,3 +37,4 @@ export const configuration = {
 The available skins are from AdminLTE template. So, you can access the documentation [here](https://adminlte.io/themes/AdminLTE/documentation/index.html)
 
 
+
