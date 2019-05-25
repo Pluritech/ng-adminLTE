@@ -5,14 +5,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 // Other Modules
 import { AuthServiceModule } from '@pluritech/auth-service';
-import { ServerServiceModule } from '@pluritech/server-service';
 import { PaginationModule } from '@pluritech/pagination';
 import { Ng2TableModule } from '@pluritech/ng2-responsive-table';
-import { DialogServiceModule } from '@pluritech/dialog-service';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { BootstrapModalModule } from 'ng2-bootstrap-modal';
 import { FileUploadModule } from 'ng2-file-upload/file-upload/file-upload.module';
@@ -47,6 +45,7 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
 import { configuration } from './configuration';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,18 +54,17 @@ import { configuration } from './configuration';
     ForgotPasswordComponent,
     LoaderComponent,
     MainComponent,
-    ContentLoaderComponent
+    ContentLoaderComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpModule,
+    HttpClientModule,
     ChartsModule,
     RouterModule.forRoot([]),
     AppRoutingModule,
     AuthServiceModule.forRoot(configuration.localStorageKey),
-    ServerServiceModule.forRoot(),
     ReactiveFormsModule,
     NgxMaskModule.forRoot(),
     PaginationModule,
@@ -75,7 +73,6 @@ import { configuration } from './configuration';
     ToasterModule.forRoot(),
     QuillModule,
     Ng2TableModule,
-    DialogServiceModule.forRoot()
   ],
   entryComponents: [],
   providers: [
